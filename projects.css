@@ -1,0 +1,268 @@
+
+.deals-section {
+    text-align: center;
+    padding: 3rem 20px;
+    /* background: linear-gradient(135deg, #a4cdf9 0%, #007bff 100%); */
+    width: 100vw;
+    margin: -20px auto;
+    color: #2e573e;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.3s ease-in-out;
+}
+.title1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+.title1 h1{
+    display: inline-block;
+    font-size: 5rem;
+    color: white;
+    margin: 4%;
+}
+.title1 hr{
+    margin: 0;
+    width: 80%;
+}
+
+h2 {
+    font-size: xx-large;
+    margin-bottom: 1.5rem;
+}
+
+.ok {
+    color: red;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+}
+/* .pic{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+/* Carousel Styling */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px;
+    margin: -10px auto;
+    height: 450px;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-inner {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease;
+    gap: 0px;
+    margin: 40px;
+}
+
+/* Deal Item Styling */
+.deal-item {
+    min-width: 500px;   
+    flex: 0 0 300px;
+    box-sizing: border-box;
+    margin: 30px;
+    padding: 42px;
+    background: #ffffff;
+    /* Start with a clean white background */
+    border: 2px solid transparent;
+    background-color: pink;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease, background-color 0.4s ease;
+    cursor: pointer;
+}
+.pic{
+    width: 400px; /* Width of the box */
+    height: 200px; /* Height of the box */
+    
+    overflow: hidden;
+}
+.pic img{
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.deal-item:hover {
+    transform: scale(1.1);
+    /* Enlarge on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    background: plum;
+    /* background: linear-gradient(135deg, #dd36cf 0%, #fdf4fd 100%); /* Nature-inspired gradient (green tones) */
+    /* border: 2px solid #662f8b; /* Appear border on hover */
+}
+
+
+
+.deal-item:hover .discount {
+    color: #ff7043;
+    /* Highlight discount with orange when hovered */
+}
+
+/* Button Styles */
+button {
+    background-color: #ba5ae0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease, border 0.3s ease;
+   
+    
+}
+
+button:hover {
+    background-color: #19181a;
+    /* Bright yellow on hover */
+    color: #e9e8ea;
+    transform: translateY(-3px);
+    border: 2px solid #7f6e60;
+}
+
+/* Carousel Button Styles */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 12px;
+    border-radius: 50px;
+    font-size: -2rem;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background-color: #14db43;
+    transform: scale(1.1);
+}
+/* Animation for Carousel Slide */
+@keyframes slideIn {
+    from {
+    transform: translateX(100%);
+    }
+    to {
+    transform: translateX(0);
+    }
+}
+
+.carousel-inner {
+    animation: slideIn 0.5s ease-in-out;
+}
+
+/* Deal Title and Price Styling */
+h3 {
+    font-size: 1.8rem;
+    color: orangered;
+    margin-bottom: 0.8rem;
+    transition: color 0.4s ease;
+}
+
+p {
+    transition: color 0.4s ease;
+}
+.discount {
+    text-decoration: line-through;
+    color: #6cff43;
+    /* Discount text in a noticeable orange */
+}
+.btn-book-now {
+    position: relative;
+    display: block;
+    min-width: 130px;
+    height: 40px;
+    margin: 0 auto;
+    color: orangered;
+    border: 1px solid orangered;
+    border-radius: 50px;
+    background-color: bisque;
+    padding: 5px 10px;
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: 'Inconsolata', monospace;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    box-shadow: 0 3px 2px orangered;
+}
+.btn-book-now:hover {
+    box-shadow: 0 2px 2px #36FBB1;
+    top: 1px;
+}
+.btn-book-now:active {
+    box-shadow: 0 0 #36FBB1;
+    top: 3px;
+}
+@media only screen and (max-width: 768px) {
+    .deal-item {
+        min-width: 300px;
+    }
+    .pic{
+        width: 250px; /* Width of the box */
+        height: 250px; /* Height of the box */
+        overflow: hidden;
+    }
+    .pic img{
+        margin: 10px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .carousel {
+        height: 500px;
+    }
+    .carousel-inner {
+        margin: 20px;
+    }
+    .carousel-button {
+        padding: 8px;
+    }
+    .deal-item {
+        padding: 20px;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    .btn-book-now {
+        font-size: 0.8rem;
+    }
+    .title1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        margin-top: 70%;
+        
+    }
+    .title1 h1{
+        display: inline-block;
+        font-size: 4rem;
+        color: white;
+    }
+    .title1 hr{
+        margin: 0px;
+        width: 80%;
+    }
+
+}
+    
