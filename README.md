@@ -16,9 +16,8 @@ Welcome to my personal portfolio website! This project showcases my skills, proj
 ## 🚀 Technologies Used
 
 - **Frontend**: HTML, CSS, JavaScript
-- **Frameworks/Libraries**: React 
-- **Styling**: CSS/Bootstrap
-- **Hosting**: GitHub Pages, Vercel
+- **Styling**: CSS
+- **Hosting**: GitHub Pages
 
 
 ##🌐 Demo
